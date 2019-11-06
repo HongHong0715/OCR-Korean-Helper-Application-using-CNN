@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="dongster.cameranostest">
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_INTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="OCR"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="dongster.cameranostest.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <activity
+            android:name=".Camera"
+            android:label="Camera" />
+        <activity
+            android:name=".Conversation"
+            android:label="Conversation" />
+        <activity
+            android:name=".BasicButton"
+            android:label="Basic expression" />
+        <activity
+            android:name=".AirportButton"
+            android:label="Airport/Airplane" />
+        <activity
+            android:name=".RestButton"
+            android:label="Restaurant" />
+        <activity
+            android:name=".TrafficButton"
+            android:label="Traffic" />
+        <activity
+            android:name=".AccommoButton"
+            android:label="Accommodations" />
+        <activity
+            android:name=".ShoppingButton"
+            android:label="Shopping" />
+        <activity
+            android:name=".TourButton"
+            android:label="Tourism" />
+        <activity
+            android:name=".EmergencyButton"
+            android:label="Emergency situation"></activity>
+        <activity android:name=".Result"></activity>
+        <activity android:name=".SplashActivity"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
